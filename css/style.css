@@ -1,0 +1,285 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 20px 0;
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #1abc9c;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: crimson;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Banner Trang chu*/
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 600px;
+    background-color: lightcyan;
+}
+
+.banner-text {
+    width: 50%;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    padding-left: 20px;
+}
+
+.banner-text p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.slider {
+    width: 45%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.slider img.active {
+    left: 0;
+    opacity: 1;
+}
+
+.slider img.prev {
+    left: -100%;
+    opacity: 0;
+}
+
+
+/* Section */
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    border: 1px solid rgb(206, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box img {
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.feature-box h3 {
+    padding-top: 30px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content h2 {
+    background: white;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    max-width: 1500px;
+    text-align: justify;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.popup-content img {
+    width: 100%;
+    height: 100%;
+    /* max-width: 1200px;
+    width: auto;
+    max-height: 100%; */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: red;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        height: 90vh;
+        max-height: none;
+    }
+}
+
+
+
+/* -------------------------- LY DO CHON DE TAI -------------------------- */
+.page-reason {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    font-size: 22px;
+}
+
+.card h1 {
+    color: #d00000;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+@media(max-width: 768px) {
+    .page-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/*----------------------------THANH VIEN -------------------------- */
+.team-section {
+    padding: 40px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.team-section h1 {
+    color: #d00000;
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+
+.team-member h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.team-member .role {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.team-member .desc {
+    font-size: 13px;
+    color: #555;
+}
